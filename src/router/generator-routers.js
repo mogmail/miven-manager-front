@@ -1,12 +1,13 @@
 // eslint-disable-next-line
 import * as loginService from '@/api/login'
 // eslint-disable-next-line
-import { BasicLayout, BlankLayout, PageView, RouteView } from '@/layouts'
+import { BasicLayout, MulLayout, BlankLayout, PageView, RouteView } from '@/layouts'
 
 // 前端路由表
 const constantRouterComponents = {
   // 基础页面 layout 必须引入
   BasicLayout: BasicLayout,
+  MulLayout: MulLayout,
   BlankLayout: BlankLayout,
   RouteView: RouteView,
   PageView: PageView,
@@ -65,7 +66,8 @@ const rootRouter = {
   key: '',
   name: 'index',
   path: '',
-  component: 'BasicLayout',
+  // component: 'BasicLayout',
+  component: 'MulLayout',
   redirect: '/dashboard',
   meta: {
     title: '首页'

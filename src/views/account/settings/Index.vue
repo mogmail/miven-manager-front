@@ -27,12 +27,17 @@
             </a-menu-item>
             <a-menu-item key="/account/settings/binding">
               <router-link :to="{ name: 'BindingSettings' }">
-                账户绑定
+                快递管理
               </router-link>
             </a-menu-item>
             <a-menu-item key="/account/settings/notification">
               <router-link :to="{ name: 'NotificationSettings' }">
-                新消息通知
+                权限配置
+              </router-link>
+            </a-menu-item>
+             <a-menu-item key="/account/settings/log">
+              <router-link :to="{ name: 'log' }">
+                系统日志
               </router-link>
             </a-menu-item>
           </a-menu>

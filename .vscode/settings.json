@@ -1,0 +1,6 @@
+{
+    "editor.comments.insertSpace": false,
+    "editor.definitionLinkOpensInPeek": true,
+    "vetur.format.defaultFormatter.js": "vscode-typescript",
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true
+}

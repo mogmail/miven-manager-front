@@ -85,7 +85,7 @@
               </a-col>
             </a-row>
           </a-tab-pane> -->
-          <a-tab-pane tab="访问量" key="2">
+          <a-tab-pane tab="订单统计" key="2">
             <a-row>
               <a-col :xl="16" :lg="12" :md="12" :sm="24" :xs="24">
                 <bar :data="barData2" title="销售额趋势" />
