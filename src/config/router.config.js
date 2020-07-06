@@ -61,21 +61,21 @@ export const asyncRouterMap = [
           },
           {
             path: '/home/table-list/:pageNo([1-9]\\d*)?',
-            name: 'TableListWrapper',
+            name: 'IndexImages',
             hideChildrenInMenu: true, // 强制显示 MenuItem 而不是 SubMenu
             component: () => import('@/views/home/IndexImages'),
             meta: { title: '首页轮播图管理', keepAlive: true, permission: ['table'] }
           },
           {
             path: '/home/index-block',
-            name: 'TableListWrapper',
+            name: 'IndexBlock',
             hideChildrenInMenu: true, // 强制显示 MenuItem 而不是 SubMenu
             component: () => import('@/views/home/IndexBlock'),
             meta: { title: '首页板块内容管理', keepAlive: true, permission: ['table'] }
           },
           {
             path: '/home/index-other',
-            name: 'TableListWrapper',
+            name: 'IndexOther',
             hideChildrenInMenu: true, // 强制显示 MenuItem 而不是 SubMenu
             component: () => import('@/views/home/IndexOther'),
             meta: { title: '其他板块内容管理', keepAlive: true, permission: ['table'] }

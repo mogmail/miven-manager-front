@@ -1,8 +1,11 @@
 <template>
   <page-header-wrapper content>
     <a-row :gutter="24">
-      <a-col :span="12">
-        <a-card :body-style="{padding: '24px 32px'}" :bordered="true">
+      <!--<a-col :span="4">
+        <a-card
+          :body-style="{padding: '24px 32px 24px 0'}"
+          :bordered="true"
+        >
           <a-tree
             :tree-data="treeData"
             show-icon
@@ -13,9 +16,15 @@
             <a-icon slot="icon" type="carry-out" style="margin-right: 10px" />
           </a-tree>
         </a-card>
-      </a-col>
-      <a-col :span="12">
-        <a-card :body-style="{padding: '24px 32px'}" :bordered="true">
+      </a-col>-->
+      <a-col :span="24">
+        <a-card
+          :body-style="{padding: '24px 32px'}"
+          :bordered="true"
+          :tab-list="tabList"
+          :active-tab-key="key"
+          @tabChange="key => onTabChange(key, 'key')"
+        >
           <a-form @submit="handleSubmit" :form="form">
             <a-form-item
               label="板块名称"
@@ -155,11 +164,43 @@ export default {
   },
   data () {
     return {
+      tabList: [
+        {
+          tab: '轮播图',
+          key: 'tab1'
+        },
+        {
+          tab: '活动板块',
+          key: 'tab2'
+        },
+        {
+          tab: '热门商品',
+          key: 'tab3'
+        },
+        {
+          tab: '官方精选',
+          key: 'tab4'
+        },
+        {
+          tab: '品牌周边',
+          key: 'tab5'
+        },
+        {
+          tab: '品牌精选',
+          key: 'tab6'
+        }
+      ],
+      key: 'tab1',
       form: this.$form.createForm(this),
       treeData
     }
   },
   methods: {
+    // 切换tab
+     onTabChange (key, type) {
+      console.log('切换tab', key, type)
+      this[type] = key
+    },
     onSelect (selectedKeys, info) {
       console.log('selected', selectedKeys, info)
     },
